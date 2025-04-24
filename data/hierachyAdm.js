@@ -1,6 +1,4 @@
 export const hierachyAdm = [
-
-  
   // Sachsen
   { from: "Dresden", to: "Sachsen", levelFrom: "ADM2", levelTo: "ADM1" },
   { from: "Leipzig", to: "Sachsen", levelFrom: "ADM2", levelTo: "ADM1" },
