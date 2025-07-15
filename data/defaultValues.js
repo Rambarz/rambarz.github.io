@@ -1,6 +1,12 @@
   export const defaultMaxCompareItems = 4;
   export const defaultCenter = [10.45, 51.2];
   export const defaultZoom = 5.5;
+  export const defaultEuCountries = [
+  "EU", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark",
+  "Estonia", "Finland", "France", "the Federal Republic of Germany", "Greece", "Hungary", "Ireland", "Italy",
+  "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal",
+  "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"
+];
   export const defaultSteps = [
     {
       target: "#mapContainer",
