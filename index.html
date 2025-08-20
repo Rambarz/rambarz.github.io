@@ -1,6 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
+      <script>
+      document.addEventListener("DOMContentLoaded", function(){
+      var ok = sessionStorage.getItem('auth') === 'ok';
+      if(!ok){
+        var p = window.prompt('Password');
+        if(p==='dm'){ 
+          sessionStorage.setItem('auth','ok'); 
+          document.documentElement.style.display=''; 
+        }
+        else { window.location.replace('about:blank'); }
+      } else {
+        document.documentElement.style.display='';
+      }
+    });
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./favicon.png" />
@@ -15,7 +30,7 @@
     <meta name="author" content="SODIC Research Group" />
     <meta name="keywords" content="Open Data, Spatial, Europe, Map, Government, Portals, Research" />
     <base href="/" />
-    <script type="module" crossorigin src="./assets/index-BjVTCWnQ.js"></script>
+    <script type="module" crossorigin src="./assets/index-DT-5-7Pm.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-cdJTZ8en.css">
   </head>
   <body style="background-color: #f5f1e6;">

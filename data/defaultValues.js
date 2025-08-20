@@ -2,11 +2,42 @@
   export const defaultCenter = [10.45, 51.2];
   export const defaultZoom = 5.5;
   export const defaultEuCountries = [
-  "EU", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark",
-  "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy",
-  "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal",
-  "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"
-];
+    "EU", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia", "Denmark",
+    "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy",
+    "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal",
+    "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"
+  ];
+  export const defaultEuCountriesCenters = {
+    EU: [10.0, 50.0], 
+    Austria: [13.3333, 47.5833],
+    Belgium: [4.6667, 50.8333],
+    Bulgaria: [25.25, 42.75],
+    Croatia: [16.0, 45.1],
+    Cyprus: [33.0, 35.0],
+    Czechia: [15.5, 49.75],
+    Denmark: [10.0, 56.0],
+    Estonia: [25.0, 58.7],
+    Finland: [26.0, 64.0],
+    France: [2.2137, 46.2276],
+    Germany: [10.4515, 51.1657],
+    Greece: [21.8243, 39.0742],
+    Hungary: [19.0, 47.0],
+    Ireland: [-8.0, 53.0],
+    Italy: [12.5674, 41.8719],
+    Latvia: [25.0, 57.0],
+    Lithuania: [24.0, 56.0],
+    Luxembourg: [6.1, 49.75],
+    Malta: [14.5146, 35.8997],
+    Netherlands: [5.2913, 52.1326],
+    Poland: [19.1451, 51.9194],
+    Portugal: [-8.2245, 39.3999],
+    Romania: [25.0, 46.0],
+    Slovakia: [19.5, 48.7],
+    Slovenia: [14.9955, 46.1512],
+    Spain: [-3.7038, 40.4168],
+    Sweden: [15.0, 62.0]
+  };
+
   export const defaultSteps = [
     {
       target: "#mapContainer",
