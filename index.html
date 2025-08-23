@@ -1,35 +1,76 @@
 <!doctype html>
 <html lang="en">
   <head>
-      <script>
-      document.addEventListener("DOMContentLoaded", function(){
-      var ok = sessionStorage.getItem('auth') === 'ok';
-      if(!ok){
-        var p = window.prompt('Password');
-        if(p==='dm'){ 
-          sessionStorage.setItem('auth','ok'); 
-          document.documentElement.style.display=''; 
-        }
-        else { window.location.replace('about:blank'); }
-      } else {
-        document.documentElement.style.display='';
-      }
-    });
-    </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./favicon.png" />
-    <title>SODREPO - Spatial Open Data Regions & Portals by SODIC</title>
-    <meta name="description" content="Explore and evaluate Open Data portals in Europe (Currently Germany). Built by SODIC Research Group." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SODREPO — Spatial Open Data Regions & Portals by SODIC</title>
+    <meta name="description" content="SODREPO is a map-based web app to explore, filter, and compare Open Data portals across regions (ADM0–ADM3). Built by the SODIC Research Group at TU Chemnitz." />
+    <meta name="author" content="SODIC Research Group, TU Chemnitz" />
+    <meta name="keywords" content="Open Data, DCAT-AP, Geo, MapLibre, Government, Portal, Europe, Research" />
     <meta name="theme-color" content="#f5f1e6" />
-    <meta property="og:title" content="SODREPO – Spatial Open Data Regions & Portals" />
-    <meta property="og:description" content="A map-based tool for visualizing and evaluating open data portals across regions." />
-    <meta property="og:image" content="./favicon.png" />
-    <meta property="og:url" content="https://sodic-research.github.io/SODREPO/" />
+    <meta name="robots" content="index,follow" />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="social-card.png" />
+    <link rel="canonical" href="https://rambarz.github.io/" />
+
+    <meta property="og:title" content="SODREPO — Spatial Open Data Regions & Portals" />
+    <meta property="og:description" content="Interactive map to visualize and evaluate Open Data portals across administrative levels (ADM0–ADM3)." />
     <meta property="og:type" content="website" />
-    <meta name="author" content="SODIC Research Group" />
-    <meta name="keywords" content="Open Data, Spatial, Europe, Map, Government, Portals, Research" />
-    <base href="/" />
+    <meta property="og:site_name" content="SODREPO" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://rambarz.github.io/" />
+    <meta property="og:image" content="social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SODREPO — Spatial Open Data Regions & Portals" />
+    <meta name="twitter:description" content="Map-based exploration, filtering, and comparison of Open Data portals across regions." />
+    <meta name="twitter:image" content="social-card.png" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SODREPO",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Web",
+      "url": "https://rambarz.github.io/",
+      "description": "Interactive map-based tool to explore, filter, and compare Open Data portals across administrative levels (ADM0–ADM3).",
+      "author": {
+        "@type": "Organization",
+        "name": "SODIC Research Group, TU Chemnitz",
+        "url": "https://www.tu-chemnitz.de/informatik/dm/forschung/sodic.php"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SODIC Research Group, TU Chemnitz"
+      },
+      "license": "https://opensource.org/license/mit",
+      "keywords": "Open Data, DCAT-AP, Geo, MapLibre, Government, Portal, Europe",
+      "image": "https://rambarz.github.io/social-card.png"
+    }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        var ok = sessionStorage.getItem('auth') === 'ok';
+        if(!ok){
+          var p = window.prompt('Password');
+          if(p.toLowerCase()==='dm' || p.toLowerCase()==="sodic" || p.toLowerCase()==="icegov" || p.toLowerCase()==="saxfdm"){
+            sessionStorage.setItem('auth','ok');
+            document.documentElement.style.display='';
+          } else {
+            document.documentElement.style.display='none';
+            window.location.replace('about:blank');
+          }
+        } else {
+          document.documentElement.style.display='';
+        }
+      });
+    </script>
     <script type="module" crossorigin src="./assets/index-DT-5-7Pm.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-cdJTZ8en.css">
   </head>
