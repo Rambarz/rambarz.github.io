@@ -58,20 +58,67 @@
       document.addEventListener("DOMContentLoaded", function(){
         var ok = sessionStorage.getItem('auth') === 'ok';
         if(!ok){
-          var p = window.prompt('Password');
-          if(p.toLowerCase()==='dm' || p.toLowerCase()==="sodic" || p.toLowerCase()==="icegov" || p.toLowerCase()==="saxfdm"){
-            sessionStorage.setItem('auth','ok');
-            document.documentElement.style.display='';
-          } else {
-            document.documentElement.style.display='none';
-            window.location.replace('about:blank');
-          }
+          var modal = document.createElement('div');
+          modal.style.position = 'fixed';
+          modal.style.top = '0';
+          modal.style.left = '0';
+          modal.style.width = '100vw';
+          modal.style.height = '100vh';
+          modal.style.background = 'rgba(255,255,255,0.95)';
+          modal.style.zIndex = '9999';
+          modal.style.display = 'flex';
+          modal.style.flexDirection = 'column';
+          modal.style.alignItems = 'center';
+          modal.style.justifyContent = 'center';
+          modal.innerHTML = `
+            <div style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              max-width: 400px;
+              background: black;
+              padding: 24px;
+              border-radius: 12px;
+              box-shadow: 0 2px 12px #ccc;
+            ">
+              <div>
+                <label style="font-size:1.2em;font-weight:bold;color:white;">Passwort:</label>
+                <input id="pwinput" type="password" style="margin:8px 0;padding:6px;font-size:1em;" />
+              </div>
+              <div style="margin:10px 0;">
+                <input type="checkbox" checked id="agree" />
+                <label for="agree" style="font-size:1em;color:white;">Mit dieser Zustimmung werden Daten (IP Adresse) an Drittstaaten übermittelt um die CARTO und Open Street Map Daten zu laden.</label>
+              </div>
+              <button id="pwbtn" style="padding:8px 18px;font-size:1em;cursor:pointer;">Login</button>
+            </div>
+          `;
+          document.body.appendChild(modal);
+          document.getElementById('root').style.display='none';
+
+          document.getElementById('pwbtn').onclick = function(){
+            var p = document.getElementById('pwinput').value;
+            var checked = document.getElementById('agree').checked;
+            if(checked && (
+              p.toLowerCase()==='dm' ||
+              p.toLowerCase()==="sodic" ||
+              p.toLowerCase()==="icegov" ||
+              p.toLowerCase()==="saxfdm" ||
+              p.toLowerCase()==="okfn"
+            )){
+              sessionStorage.setItem('auth','ok');
+              document.getElementById('root').style.display='';
+              modal.remove();
+            } else {
+              alert("Bitte stimmen Sie zu und geben Sie ein gültiges Passwort ein.");
+            }
+          };
         } else {
-          document.documentElement.style.display='';
+          document.getElementById('root').style.display='';
         }
       });
     </script>
-    <script type="module" crossorigin src="./assets/index-BwVsRAhl.js"></script>
+    <script type="module" crossorigin src="./assets/index-BvvyF09L.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-cdJTZ8en.css">
   </head>
   <body style="background-color: #f5f1e6;">
