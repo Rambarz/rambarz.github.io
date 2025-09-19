@@ -56,7 +56,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function(){
-        console.log(window.location )
+        console.log(window.location)
         if (window.location.hash !== "#/privacypolicy") {
           var ok = sessionStorage.getItem('auth') === 'ok';
           if(!ok){
@@ -93,7 +93,7 @@
                   <label for="agree" style="font-size:1em;color:white;">Mit dieser Zustimmung werden Daten (IP Adresse) an Drittstaaten übermittelt um die CARTO und Open Street Map Daten zu laden. Anderenfalls kann leider keine Kartendarstellung gewährleistet werden.</label>
                 </div>
                 <button id="pwbtn" style="padding:8px 18px;font-size:1em;cursor:pointer;">Login</button>
-                <div style="margin-top:20px;font-size:1em;color:white;">Die Datenschutzerklärung können sie <a style="color:white" href="/#/privacypolicy">hier</a> einsehen.</p></div>
+                <div style="margin-top:20px;font-size:1em;color:white;">Die Datenschutzerklärung können sie <a style="color:white" target="_blank" rel="noopener noreferrer" href="/#/privacypolicy">hier</a> einsehen.</p></div>
               </div>
             `;
             document.body.appendChild(modal);
