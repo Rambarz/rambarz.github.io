@@ -18,7 +18,6 @@ export const sodrepoData = {
         }
     },
     openDataPortals: [
-// Österreich, ADM0
             {
               "name": "data.gv.at - Das Open Government Data Portal der Republik Österreich",
               "nameEn": "data.gv.at - The Open Government Data Portal of the Republic of Austria",
@@ -726,7 +725,6 @@ export const sodrepoData = {
               },
               "additionalProperties": null
             },
-// Österreich, ADM1
             {
               "name": "Open Government Data - Land Burgenland",
               "nameEn": "Open Government Data - federal state Burgenland",
@@ -1434,7 +1432,6 @@ export const sodrepoData = {
               },
               "additionalProperties": null
             },
-// Schweiz, ADM0
             {
               "name": "opendata.swiss",
               "nameEn": "opendata.swiss",
@@ -1637,7 +1634,6 @@ export const sodrepoData = {
               },
               "additionalProperties": null
             },
-// Schweiz, gefundene ADM1
             {
               "name": "Stadt Zürich Open Data",
               "nameEn": "City of Zurich Open Data",
@@ -3153,7 +3149,6 @@ export const sodrepoData = {
               },
               "additionalProperties": null
             },
-// Restliche europäische Länder, ADM0
             {
               "name": "Open Data Albanien",
               "nameEn": "Open Data Albania",
@@ -9409,6 +9404,107 @@ export const sodrepoData = {
               },
               "metadata": {
                 "details": "Metadatenkatalog im Geoportal vorhanden",
+                "available": true,
+                "url": null,
+                "endpoint": null,
+                "formats": []
+              },
+              "additionalProperties": {}
+            },
+            {
+              "name": "Open Data Portal Hessen",
+              "nameEn": "Open Data Portal Hesse",
+              "mainTopic": "Open Data des Landes Hessen",
+              "portalType": "Open Data",
+              "portalTypeEn": "Open Data",
+              "portalHexColor": null,
+              "inCountry": "Deutschland",
+              "inCountryEn": "Germany",
+              "inFederalState": "Hessen",
+              "inFederalStateEn": "Hesse",
+              "inDistrict": "",
+              "inDistrictEn": "",
+              "inCity": "",
+              "inCityEn": "",
+              "isCountry": false,
+              "isFederalState": true,
+              "isDistrict": false,
+              "isCity": false,
+              "isGovernment": true,
+              "isCivilLaw": false,
+              "isOther": false,
+              "levelInEu": 2,
+              "inhabitants": 6421000,
+              "geoBoundariesLevel": null,
+              "geoBoundariesType": "ADM1",
+              "relatedToEu": true,
+              "license": "nicht angegeben (idR CC BY oder dl-de/by)",
+              "licenseEn": "nicht angegeben (idR CC BY oder dl-de/by)",
+              "publisher": {
+                "name": "Hessisches Ministerium für Digitalisierung und Innovation",
+                "nameEn": "Hessisches Ministerium für Digitalisierung und Innovation",
+                "contactEmail": "mail@opendata.hessen.de"
+              },
+              "url": "https://opendata.hessen.de/",
+              "subdomain": true,
+              "urlSubdomainIsOpenData": true,
+              "datasetsCount": 1301,
+              "datasetUploadLastThreeMonths": true,
+              "datasetUpdatedLastThreeMonths": true,
+              "categoriesCount": 18,
+              "portalSoftware": "CKAN",
+              "openDataRanking": true,
+              "openDataRankingPoints": 14,
+              "openDataInventoryRankingPoints": 0,
+              "openDataBarometerPoints": 0,
+              "globalDataBarometerPoints": 0,
+              "oecdOurdataInexPoints": 0,
+              "opendataMaturityStudiePoints": 0,
+              "openDataCityCensusPoints": 0,
+              "dataFormats": [],
+              "mostDataFormat": null,
+              "fiveStar": null,
+              "dcat": {
+                "details": null,
+                "available": false,
+                "url": null,
+                "type": null,
+                "DCAT": false,
+                "DCAT-AP": false,
+                "DCAT-AP_SHACL": false
+              },
+              "ckan": {
+                "details": null,
+                "available": true,
+                "url": null,
+                "type": null
+              },
+              "apiDocumentation": {
+                "details": null,
+                "available": false,
+                "url": null,
+                "type": null
+              },
+              "mqa": {
+                "details": null,
+                "available": false,
+                "url": null,
+                "points": 0
+              },
+              "sparql": {
+                "details": null,
+                "available": false,
+                "url": null,
+                "endpoint": null
+              },
+              "graphql": {
+                "details": null,
+                "available": false,
+                "url": null,
+                "endpoint": null
+              },
+              "metadata": {
+                "details": "CKAN endpoint",
                 "available": true,
                 "url": null,
                 "endpoint": null,

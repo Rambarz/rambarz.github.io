@@ -78,21 +78,18 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                max-width: 400px;
+                max-width: 580px;
                 background: black;
                 padding: 24px;
                 border-radius: 12px;
                 box-shadow: 0 2px 12px #ccc;
+                font-size: 2em;
               ">
-                <div>
-                  <label style="font-size:1.2em;font-weight:bold;color:white;">Passwort:</label>
-                  <input autofocus id="pwinput" type="password" style="margin:8px 0;padding:6px;font-size:1em;" />
-                </div>
                 <div style="margin:10px 0;">
-                  <input type="checkbox" id="agree" />
+                  <input type="checkbox" id="agree" style="width:22px;height:22px;min-width:22px;min-height:22px;margin-right:10px;accent-color:#f5f1e6;cursor:pointer;" />
                   <label for="agree" style="font-size:1em;color:white;">Mit dieser Zustimmung werden Daten (IP Adresse) an Drittstaaten übermittelt um die CARTO und Open Street Map Daten zu laden. Anderenfalls kann leider keine Kartendarstellung gewährleistet werden.</label>
                 </div>
-                <button id="pwbtn" style="padding:8px 18px;font-size:1em;cursor:pointer;">Login</button>
+                <button id="pwbtn" style="padding:12px 28px;font-size:1.05em;font-weight:600;cursor:pointer;border:none;border-radius:999px;background:linear-gradient(120deg,#a5b4fc,#3b82f6);color:white;box-shadow:0 6px 18px rgba(59,130,246,0.35);transition:transform 0.2s ease,box-shadow 0.2s ease;">Login</button>
                 <div style="margin-top:20px;font-size:1em;color:white;">Die Datenschutzerklärung können sie <a style="color:white" target="_blank" rel="noopener noreferrer" href="/#/privacypolicy">hier</a> einsehen.</p></div>
               </div>
             `;
@@ -100,20 +97,25 @@
             document.getElementById('root').style.display='none';
 
             document.getElementById('pwbtn').onclick = function(){
-              var p = document.getElementById('pwinput').value;
+               // <div>
+                //   <label style="font-size:1.2em;font-weight:bold;color:white;">Passwort:</label>
+                //   <input autofocus id="pwinput" type="password" style="margin:8px 0;padding:6px;font-size:1em;" />
+                // </div>
+              // Passwortlogik deaktiviert – Checkbox genügt für den Zugriff
+              // var p = document.getElementById('pwinput').value;
               var checked = document.getElementById('agree').checked;
-              if(checked && (
+              if(checked /* && (
                 p.toLowerCase()==='dm' ||
                 p.toLowerCase()==="sodic" ||
                 p.toLowerCase()==="icegov" ||
                 p.toLowerCase()==="saxfdm" ||
                 p.toLowerCase()==="okfn"
-              )){
+              )*/){
                 sessionStorage.setItem('auth','ok');
                 document.getElementById('root').style.display='';
                 modal.remove();
               } else {
-                alert("Bitte stimmen Sie der Datenschutzerklärung für die Kartennutzung zu und geben Sie ein gültiges Passwort ein.");
+                alert("Bitte stimmen Sie der Datenschutzerklärung für die Kartennutzung zu.");
               }
             };
           } else {
@@ -122,7 +124,7 @@
         }
       });
     </script>
-    <script type="module" crossorigin src="./assets/index-DDK-cIlL.js"></script>
+    <script type="module" crossorigin src="./assets/index-Bi-v9rCv.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BYBZQfmo.css">
   </head>
   <body style="background-color: #f5f1e6;">
