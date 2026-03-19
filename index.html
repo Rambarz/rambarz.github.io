@@ -89,6 +89,10 @@
                   <input type="checkbox" id="agree" style="width:22px;height:22px;min-width:22px;min-height:22px;margin-right:10px;accent-color:#f5f1e6;cursor:pointer;" />
                   <label for="agree" style="font-size:1em;color:white;">Mit dieser Zustimmung werden Daten (IP Adresse) an Drittstaaten übermittelt um die CARTO und Open Street Map Daten zu laden. Anderenfalls kann leider keine Kartendarstellung gewährleistet werden.</label>
                 </div>
+                <div style="margin:10px 0;width:100%;display:flex;flex-direction:column;align-items:flex-start;">
+                  <label for="pwinput" style="font-size:1em;color:white;margin-bottom:8px;">Passwort:</label>
+                  <input autofocus id="pwinput" type="password" style="width:100%;max-width:320px;margin:0;padding:10px 12px;font-size:0.7em;border-radius:8px;border:1px solid #d1d5db;" />
+                </div>
                 <button id="pwbtn" style="padding:12px 28px;font-size:1.05em;font-weight:600;cursor:pointer;border:none;border-radius:999px;background:linear-gradient(120deg,#a5b4fc,#3b82f6);color:white;box-shadow:0 6px 18px rgba(59,130,246,0.35);transition:transform 0.2s ease,box-shadow 0.2s ease;">Login</button>
                 <div style="margin-top:20px;font-size:1em;color:white;">Die Datenschutzerklärung können sie <a style="color:white" target="_blank" rel="noopener noreferrer" href="/#/privacypolicy">hier</a> einsehen.</p></div>
               </div>
@@ -97,12 +101,7 @@
             document.getElementById('root').style.display='none';
 
             document.getElementById('pwbtn').onclick = function(){
-                <div>
-                 <label style="font-size:1.2em;font-weight:bold;color:white;">Passwort:</label>
-                 <input autofocus id="pwinput" type="password" style="margin:8px 0;padding:6px;font-size:1em;" />
-                </div>
-              // Passwortlogik – Checkbox genügt für den Zugriff Laut Tews
-               var p = document.getElementById('pwinput').value;
+              var p = document.getElementById('pwinput').value.trim();
               var checked = document.getElementById('agree').checked;
               if(checked && (
                 p.toLowerCase()==='dm' ||
@@ -113,7 +112,7 @@
                 document.getElementById('root').style.display='';
                 modal.remove();
               } else {
-                alert("Bitte stimmen Sie der Datenschutzerklärung für die Kartennutzung zu.");
+                alert("Bitte stimmen Sie der Datenschutzerklärung zu und geben Sie ein gueltiges Passwort ein.");
               }
             };
           } else {
