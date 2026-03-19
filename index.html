@@ -97,20 +97,18 @@
             document.getElementById('root').style.display='none';
 
             document.getElementById('pwbtn').onclick = function(){
-               // <div>
-                //   <label style="font-size:1.2em;font-weight:bold;color:white;">Passwort:</label>
-                //   <input autofocus id="pwinput" type="password" style="margin:8px 0;padding:6px;font-size:1em;" />
-                // </div>
-              // Passwortlogik deaktiviert – Checkbox genügt für den Zugriff
-              // var p = document.getElementById('pwinput').value;
+                <div>
+                 <label style="font-size:1.2em;font-weight:bold;color:white;">Passwort:</label>
+                 <input autofocus id="pwinput" type="password" style="margin:8px 0;padding:6px;font-size:1em;" />
+                </div>
+              // Passwortlogik – Checkbox genügt für den Zugriff Laut Tews
+               var p = document.getElementById('pwinput').value;
               var checked = document.getElementById('agree').checked;
-              if(checked /* && (
+              if(checked && (
                 p.toLowerCase()==='dm' ||
                 p.toLowerCase()==="sodic" ||
-                p.toLowerCase()==="icegov" ||
-                p.toLowerCase()==="saxfdm" ||
                 p.toLowerCase()==="okfn"
-              )*/){
+              )){
                 sessionStorage.setItem('auth','ok');
                 document.getElementById('root').style.display='';
                 modal.remove();
